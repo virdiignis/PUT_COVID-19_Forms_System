@@ -1,0 +1,14 @@
+django
+django-guardian
+django-phonenumber-field
+phonenumbers
+django-autocomplete-light
+django-bootstrap-modal-forms
+psycopg2-binary
+uwsgitop
+redis
+celery
+uwsgi
+django-redis
+git+https://github.com/django-compressor/django-compressor.git@refs/pull/989/merge
+django-csp

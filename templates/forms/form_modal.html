@@ -1,0 +1,46 @@
+{% load i18n %}
+<form method="post" action="">
+    {% csrf_token %}
+
+    <div class="modal-header">
+        <h5 class="modal-title">{% block content_title %}{% endblock %}</h5>
+        <button type="button" class="close closeModalButton" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        {% for field in form %}
+            <div class="form-group{% if field.errors %} invalid{% endif %}">
+                <div class="d-flex justify-content-between align-items-center fieldWrapper">
+                    {{ field.label_tag }}
+                    {{ field }}
+                </div>
+                {% for error in field.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default closeModalButton">{% translate "Cancel" %}</button>
+        <button type="button" id="addUnitSubmitButton"
+                class="submit-btn btn btn-primary">{% translate "Submit" %}</button>
+    </div>
+
+    {% load compress %}
+    {% compress css file %}
+        {{ form.media.css }}
+    {% endcompress %}
+    {% compress js file %}
+        {{ form.media.js }}
+        <script nonce="{{ request.csp_nonce }}" type="text/javascript">
+            $(function () {
+                $("button.closeModalButton").on('click', function () {
+                    $('#modal').modal('hide');
+                });
+            })
+        </script>
+    {% endcompress %}
+</form>
