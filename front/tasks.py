@@ -21,7 +21,7 @@ def send_confirmation_mail(self, form_id):
         if suffix.startswith('/pl-pl/') or suffix.startswith('/en-us/'):
             suffix = suffix[4:]
 
-        link = settings.ALLOWED_HOSTS[0] + '/' + suffix
+        link = "https://" + settings.ALLOWED_HOSTS[0] + '/' + suffix
         html_content = f"""Dzień dobry,<br>
 <br>
 Twój adres email został podany w formularzu zgłoszenia przypadku do Biura ds. COVID-19 PP.<br>
