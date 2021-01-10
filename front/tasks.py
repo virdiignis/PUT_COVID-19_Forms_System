@@ -97,16 +97,16 @@ def send_form_by_mail(self, form_id):
             return
 
         text = f"""
-Title:\t\t{form.get_title_display()}
-First name:\t\t{form.first_name}
-Middle name:\t\t{form.middle_name}
-Last name:\t\t{form.last_name}
-Email:\t\t{form.email}
-Phone number:\t\t{form.phone_number}
-Role:\t\t{form.get_role_display()}
-DS:\t\t{form.get_dorm_display()}
-Unit:\t\t{form.unit}
-Health state:\t\t{form.get_health_state_display()}
+Title:         {form.get_title_display()}
+First name:    {form.first_name}
+Middle name:   {form.middle_name}
+Last name:     {form.last_name}
+Email:         {form.email}
+Phone number:  {form.phone_number}
+Role:          {form.get_role_display()}
+DS:            {form.get_dorm_display()}
+Unit:          {form.unit}
+Health state:  {form.get_health_state_display()}
 """
 
         try:
@@ -116,10 +116,10 @@ Health state:\t\t{form.get_health_state_display()}
         else:
             form_type = "Isolation form"
             text += f"""{form_type}
-Reason:\t\t{form.reason}
-Order date:\t\t{form.order_date}
-Start date:\t\t{form.start_date}
-End date:\t\t{form.end_date}
+Reason:        {form.reason}
+Order date:    {form.order_date}
+Start date:    {form.start_date}
+End date:      {form.end_date}
 """
 
         try:
@@ -129,9 +129,9 @@ End date:\t\t{form.end_date}
         else:
             form_type = "Test order form"
             text += f"""{form_type}
-Reason:\t\t{form.reason}
-Order date:\t\t{form.order_date}
-Issuer:\t\t{form.issuer}
+Reason:        {form.reason}
+Order date:    {form.order_date}
+Issuer:        {form.issuer}
 """
 
         try:
@@ -141,13 +141,13 @@ Issuer:\t\t{form.issuer}
         else:
             form_type = "Test result form"
             text += f"""{form_type}
-Reason:\t\t{form.reason}
-Order date:\t\t{form.order_date}
-Test date:\t\t{form.test_date}
-Result date:\t\t{form.result_date}
-Test result:\t\t{form.get_test_result_display()}
-Issuer:\t\t{form.issuer}
-Isolation end:\t\t{form.isolation_end}
+Reason:        {form.reason}
+Order date:    {form.order_date}
+Test date:     {form.test_date}
+Result date:   {form.result_date}
+Test result:   {form.get_test_result_display()}
+Issuer:        {form.issuer}
+Isolation end: {form.isolation_end}
 """
 
         text += f"Remarks:\t\t{form.remarks}"
