@@ -1,5 +1,5 @@
 {% load i18n %}
-<form method="post" action="">
+<form method="post" action="" enctype="multipart/form-data">
     {% csrf_token %}
 
     <div class="modal-header">
@@ -10,17 +10,140 @@
     </div>
 
     <div class="modal-body">
-        {% for field in form %}
-            <div class="form-group{% if field.errors %} invalid{% endif %}">
-                <div class="d-flex justify-content-between align-items-center fieldWrapper">
-                    {{ field.label_tag }}
-                    {{ field }}
-                </div>
-                {% for error in field.errors %}
+        <div class="form-group row justify-content-between {% if form.title.errors %} invalid {% endif %}">
+            {{ form.title.label_tag }}
+            <div class="col-7">
+                {{ form.title }}
+                <small class="form-text text-muted">{{ form.title.help_text }}</small>
+
+                {% for error in form.title.errors %}
                     <p class="help-block text-danger">{{ error }}</p>
                 {% endfor %}
             </div>
-        {% endfor %}
+        </div>
+        <div class="form-group row justify-content-between {% if form.first_name.errors %} invalid {% endif %}">
+            {{ form.first_name.label_tag }}
+            <div class="col-7">
+                {{ form.first_name }}
+                <small class="form-text text-muted">{{ form.first_name.help_text }}</small>
+
+                {% for error in form.first_name.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.middle_name.errors %} invalid {% endif %}">
+            {{ form.middle_name.label_tag }}
+            <div class="col-7">
+                {{ form.middle_name }}
+                <small class="form-text text-muted">{{ form.middle_name.help_text }}</small>
+
+                {% for error in form.middle_name.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.last_name.errors %} invalid {% endif %}">
+            {{ form.last_name.label_tag }}
+            <div class="col-7">
+                {{ form.last_name }}
+                <small class="form-text text-muted">{{ form.last_name.help_text }}</small>
+
+                {% for error in form.last_name.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.email.errors %} invalid {% endif %}">
+            {{ form.email.label_tag }}
+            <div class="col-7">
+                {{ form.email }}
+                <small class="form-text text-muted">{{ form.email.help_text }}</small>
+
+                {% for error in form.email.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.phone_number.errors %} invalid {% endif %}">
+            {{ form.phone_number.label_tag }}
+            <div class="col-7">
+                {{ form.phone_number }}
+                <small class="form-text text-muted">{{ form.phone_number.help_text }}</small>
+
+                {% for error in form.phone_number.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.role.errors %} invalid {% endif %}">
+            {{ form.role.label_tag }}
+            <div class="col-7">
+                {{ form.role }}
+                <small class="form-text text-muted">{{ form.role.help_text }}</small>
+
+                {% for error in form.role.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.dorm.errors %} invalid {% endif %}">
+            {{ form.dorm.label_tag }}
+            <div class="col-7">
+                {{ form.dorm }}
+                <small class="form-text text-muted">{{ form.dorm.help_text }}</small>
+
+                {% for error in form.dorm.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.unit.errors %} invalid {% endif %}">
+            {{ form.unit.label_tag }}
+            <div class="col-7">
+                {{ form.unit }}
+                <small class="form-text text-muted">{{ form.unit.help_text }}</small>
+
+                {% for error in form.unit.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.health_state.errors %} invalid {% endif %}">
+            {{ form.health_state.label_tag }}
+            <div class="col-7">
+                {{ form.health_state }}
+                <small class="form-text text-muted">{{ form.health_state.help_text }}</small>
+
+                {% for error in form.health_state.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        {% block nonstandard_fields %}
+        {% endblock %}
+        <div class="form-group row justify-content-between {% if form.doc.errors %} invalid {% endif %}">
+            {{ form.doc.label_tag }}
+            <div class="col-7">
+                {{ form.doc }}
+                <small class="form-text text-muted">{{ form.doc.help_text }}</small>
+
+                {% for error in form.doc.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group row justify-content-between {% if form.remarks.errors %} invalid {% endif %}">
+            {{ form.remarks.label_tag }}
+            <div class="col-7">
+                {{ form.remarks }}
+                <small class="form-text text-muted">{{ form.remarks.help_text }}</small>
+
+                {% for error in form.remarks.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
     <div class="modal-footer">
@@ -30,16 +153,26 @@
     </div>
 
     {% load compress %}
+    {% load static %}
     {% compress css file %}
         {{ form.media.css }}
     {% endcompress %}
     {% compress js file %}
         {{ form.media.js }}
+        <script nonce="{{ request.csp_nonce }}" src="{% static "js/flatpickr.fields.setup.js" %}"></script>
         <script nonce="{{ request.csp_nonce }}" type="text/javascript">
             $(function () {
                 $("button.closeModalButton").on('click', function () {
                     $('#modal').modal('hide');
                 });
+                $("input").addClass("form-control");
+                $("select").addClass("form-control");
+                let inputfile = $("input:file");
+                inputfile.addClass("form-control-file");
+                inputfile.removeClass("form-control");
+                let label = $("label")
+                label.addClass("col-5");
+                label.addClass("col-form-label");
             })
         </script>
     {% endcompress %}

@@ -1,9 +1,79 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 {% block content %}
     <div class="modal fade" role="dialog" id="modal">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content"></div>
         </div>
     </div>
+    <div class="row justify-content-end">
+        <a href="{% static 'rodo.pdf' %}">{% translate "privacy policy" %}</a>
+    </div>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="card col-12 col-md-4 col-lg-3 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "Report isolation" %}</h5>
+                    <p>Some text describing when you should report isolation using this form.</p>
+                    <button id="isolationButton" class="btn btn-primary text-white" type="button"
+                            name="button">{% translate "Report isolation" %}
+                    </button>
+                </div>
+            </div>
+            <div class="card col-12 col-md-4 col-lg-3 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "Report test order" %}</h5>
+                    <p>Some text describing when you should report isolation using this form.</p>
+                    <button id="testOrderButton" class="btn btn-primary text-white" type="button"
+                            name="button">{% translate "Report test order" %}
+                    </button>
+                </div>
+            </div>
+            <div class="card col-12 col-md-4 col-lg-3 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "Report test result" %}</h5>
+                    <p>Some text describing when you should report isolation using this form.</p>
+                    <button id="testResultButton" class="btn btn-primary text-white" type="button"
+                            name="button">{% translate "Report test result" %}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% load compress %}
+    {% load static %}
+    {% compress js file %}
+        <script nonce="{{ request.csp_nonce }}" src="{% static 'js/jquery.bootstrap.modal.forms.min.js' %}"></script>
+        <script nonce="{{ request.csp_nonce }}" type="text/javascript">
+            $(function () {
+                function isolationModal() {
+                    $("#isolationButton").modalForm({
+                        modalID: "#modal",
+                        formURL: "{% url 'form_isolation' %}",
+                    });
+                }
+
+                function testOrderModal() {
+                    $("#testOrderButton").modalForm({
+                        modalID: "#modal",
+                        formURL: "{% url 'form_test_order' %}",
+                    });
+                }
+
+                function testResultModal() {
+                    $("#testResultButton").modalForm({
+                        modalID: "#modal",
+                        formURL: "{% url 'form_test_result' %}",
+                    });
+                }
+
+                isolationModal();
+                testOrderModal();
+                testResultModal();
+            });
+        </script>
+    {% endcompress %}
 {% endblock %}

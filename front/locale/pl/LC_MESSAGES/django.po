@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-10 01:52+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+#: front/models.py:11
+msgid "Mr"
+msgstr "Pan"
+
+#: front/models.py:12
+msgid "Ms"
+msgstr "Pani"
+
+#: front/models.py:13
+msgid "eng."
+msgstr "inż."
+
+#: front/models.py:14
+msgid "msc"
+msgstr "mgr"
+
+#: front/models.py:15
+msgid "msc eng."
+msgstr "mgr inż."
+
+#: front/models.py:16
+msgid "dr"
+msgstr "drd"
+
+#: front/models.py:17
+msgid "dr eng."
+msgstr "dr inż."
+
+#: front/models.py:18
+msgid "dr habil."
+msgstr "dr hab."
+
+#: front/models.py:19
+msgid "dr habil. eng."
+msgstr "dr hab. inż."
+
+#: front/models.py:20
+msgid "prof. dr habil."
+msgstr "prof. dr hab."
+
+#: front/models.py:21
+msgid "prof. dr habil. eng."
+msgstr "prof. dr hab. inż."
+
+#: front/models.py:22
+msgid "dr habil. prof. PUT"
+msgstr "dr hab. prof. PP"
+
+#: front/models.py:23
+msgid "dr habil. eng. prof. PUT"
+msgstr "dr hab. inż. prof. PP"
+
+#: front/models.py:24
+msgid "title"
+msgstr "tytuł"
+
+#: front/models.py:25
+msgid "first name"
+msgstr "imię"
+
+#: front/models.py:26
+msgid "middle name"
+msgstr "drugie imię"
+
+#: front/models.py:27
+msgid "last name"
+msgstr "nazwisko"
+
+#: front/models.py:29
+msgid "Use your PUT email, so we can verify your identity."
+msgstr "Użyj adresu w domenie Politechniki, w celu weryfikacji tożsamości."
+
+#: front/models.py:30
+msgid "phone number"
+msgstr "numer telefonu"
+
+#: front/models.py:31
+msgid "Phone number needs to start with area code e.g. +48 for Poland."
+msgstr "Numer telefonu musi zaczynać się od numeru kierunkowego np. +48 dla Polski."
+
+#: front/models.py:32
+msgid "Student"
+msgstr "Student"
+
+#: front/models.py:33
+msgid "Employee"
+msgstr "Pracownik"
+
+#: front/models.py:34 front/models.py:37
+msgid "None"
+msgstr "Brak"
+
+#: front/models.py:34
+msgid "role"
+msgstr "rola"
+
+#: front/models.py:35
+msgid "PhD students are supposed to select 'Student'."
+msgstr "Doktoranci proszeni są wybrać 'Student'."
+
+#: front/models.py:44
+msgid "dorm"
+msgstr "DS"
+
+#: front/models.py:44
+msgid "Only choose dorm if you currently live in one."
+msgstr "Wybierz DS tylko, jeśli obecnie w nim mieszkasz."
+
+#: front/models.py:45
+msgid "unit"
+msgstr "jednostka"
+
+#: front/models.py:46
+msgid "Faculty in case of students, Institute in case of employees."
+msgstr "Studenci wpisują wydział, pracownicy instytut lub dział."
+
+#: front/models.py:48
+msgid "Asymptomatic (no test result)"
+msgstr "Bezobjawowy (brak wyniku testu)"
+
+#: front/models.py:49
+msgid "Symptomatic (no test result)"
+msgstr "Objawowy (brak wyniku testu)"
+
+#: front/models.py:50
+msgid "Asymptomatic (positive test result)"
+msgstr "Bezobjawowy (pozytywny wynik testu)"
+
+#: front/models.py:51
+msgid "Sick (positive test result)"
+msgstr "Chory (pozytywny wynik testu)"
+
+#: front/models.py:52
+msgid "Healthy (negative test result)"
+msgstr "Zdrowy (negatywny wynik testu)"
+
+#: front/models.py:53
+msgid "Convalescent (negative test result)"
+msgstr "Ozdrowiały (negatywny wynik testu)"
+
+#: front/models.py:54
+msgid "current health state"
+msgstr "obecny stan zdrowia"
+
+#: front/models.py:55
+msgid "Confirmation document"
+msgstr "Dokument potwierdzający"
+
+#: front/models.py:56
+msgid "Here you can upload PDF document confirming sent data. (optional)"
+msgstr "Tutaj możesz wysłać PDF potwierdzający zgłoszenie (opcjonalne)."
+
+#: front/models.py:57
+msgid "remarks"
+msgstr "Uwagi"
+
+#: front/models.py:58
+msgid "Tell us if this form missed anything important."
+msgstr "Wpisz istotne informacje, których nie uwzględniono w formularzu."
+
+#: front/models.py:64 front/models.py:72
+msgid "test order date"
+msgstr "data zlecenia testu"
+
+#: front/models.py:65 front/models.py:77
+msgid "reason to get tested"
+msgstr "powód zlecenia testu"
+
+#: front/models.py:66 front/models.py:78
+msgid "e.g. symptoms, had contact with sick person etc."
+msgstr "np. objawy, kontakt z osobą chorą itp."
+
+#: front/models.py:67 front/models.py:79
+msgid "test order issuer"
+msgstr "zlecający test"
+
+#: front/models.py:68 front/models.py:80
+msgid "e.g. doctor, SANEPID, private"
+msgstr "np. lekarz, SANEPID, prywatnie"
+
+#: front/models.py:73
+msgid "test date"
+msgstr "data testu"
+
+#: front/models.py:74
+msgid "result date"
+msgstr "data uzyskania wyniku"
+
+#: front/models.py:75
+msgid "test result"
+msgstr "wynik testu"
+
+#: front/models.py:76
+msgid "Positive"
+msgstr "Pozytywny"
+
+#: front/models.py:76
+msgid "Negative"
+msgstr "Negatywny"
+
+#: front/models.py:81
+msgid "planned isolation end date"
+msgstr "planowana data końca izolacji"
+
+#: front/models.py:85
+msgid "isolation reason"
+msgstr "powód izolacji"
+
+#: front/models.py:87
+msgid ""
+"If your isolation is caused by test order or positive test result, use the "
+"respective forms to report it."
+msgstr ""
+"Jeśli izolacja jest spowodowana zleceniem testu lub pozytywnym wynikiem testu, użyj "
+"odpowiedniego z pozostałych formularzy."
+
+#: front/models.py:88
+msgid "order date"
+msgstr "data zlecenia"
+
+#: front/models.py:89
+msgid "start date"
+msgstr "data początku"
+
+#: front/models.py:90
+msgid "planned end date"
+msgstr "planowana data końca"
+
+#: front/validators.py:7
+msgid "Use email in put.poznan.pl domain."
+msgstr "Użyj adresu w domenie put.poznan.pl."

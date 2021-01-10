@@ -1,3 +1,82 @@
 {% extends "forms/form_modal.html" %}
 {% load i18n %}
 {% block content_title %}{% translate "Report test result" %}{% endblock %}
+{% block nonstandard_fields %}
+    <div class="form-group row justify-content-between {% if form.order_date.errors %} invalid {% endif %}">
+        {{ form.order_date.label_tag }}
+        <div class="col-7">
+            {{ form.order_date }}
+            <small class="form-text text-muted">{{ form.order_date.help_text }}</small>
+
+            {% for error in form.order_date.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.test_date.errors %} invalid {% endif %}">
+        {{ form.test_date.label_tag }}
+        <div class="col-7">
+            {{ form.test_date }}
+            <small class="form-text text-muted">{{ form.test_date.help_text }}</small>
+
+            {% for error in form.test_date.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.result_date.errors %} invalid {% endif %}">
+        {{ form.result_date.label_tag }}
+        <div class="col-7">
+            {{ form.result_date }}
+            <small class="form-text text-muted">{{ form.result_date.help_text }}</small>
+
+            {% for error in form.result_date.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.test_result.errors %} invalid {% endif %}">
+        {{ form.test_result.label_tag }}
+        <div class="col-7">
+            {{ form.test_result }}
+            <small class="form-text text-muted">{{ form.test_result.help_text }}</small>
+
+            {% for error in form.test_result.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.reason.errors %} invalid {% endif %}">
+        {{ form.reason.label_tag }}
+        <div class="col-7">
+            {{ form.reason }}
+            <small class="form-text text-muted">{{ form.reason.help_text }}</small>
+
+            {% for error in form.reason.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.issuer.errors %} invalid {% endif %}">
+        {{ form.issuer.label_tag }}
+        <div class="col-7">
+            {{ form.issuer }}
+            <small class="form-text text-muted">{{ form.issuer.help_text }}</small>
+
+            {% for error in form.issuer.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.isolation_end.errors %} invalid {% endif %}">
+        {{ form.isolation_end.label_tag }}
+        <div class="col-7">
+            {{ form.isolation_end }}
+            <small class="form-text text-muted">{{ form.isolation_end.help_text }}</small>
+
+            {% for error in form.isolation_end.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

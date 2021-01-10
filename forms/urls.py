@@ -20,5 +20,5 @@ from django.conf.urls.static import static
 from . import settings
 
 urlpatterns = [path('i18n/', include('django.conf.urls.i18n'))] + i18n_patterns(
-    path('forms/', include("front.urls")),
+    path('', include("front.urls")),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -82,13 +82,12 @@ DATABASES = {
 
 # CELERY_BROKER_URL = 'redis+socket:///var/sockets/redis.sock'
 CELERY_TIMEZONE = "Europe/Warsaw"
-# CELERY_BEAT_SCHEDULE = {
-#     'send_confirmed_forms': {
-#         'task': 'forms.send_confirmed',
-#         'schedule': 60.0,
-#     }
-# }
-
+CELERY_BEAT_SCHEDULE = {
+    'mailing': {
+        'task': 'mailing',
+        'schedule': 10.0,
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -107,7 +106,6 @@ LOCALE_PATHS = [
 FORMAT_MODULE_PATH = [
     'forms.formats',
 ]
-
 
 TIME_ZONE = 'Europe/Warsaw'
 USE_I18N = True
@@ -130,11 +128,12 @@ X_FRAME_OPTIONS = 'DENY'
 
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = "Biuro ds. COVID <biurocovid@put.poznan.pl>"
-SERVER_EMAIL = "COVID Office App <biurocovid@put.poznan.pl>"
+DEFAULT_FROM_EMAIL = "Biuro ds. COVID-19 <biurocovid@put.poznan.pl>"
+SERVER_EMAIL = "COVID Forms App <biurocovid@put.poznan.pl>"
 
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 # SECURE_HSTS_SECONDS = 31536000 # TODO: enable once tested
 SECURE_HSTS_PRELOAD = True
 SECURE_BROWSER_XSS_FILTER = True

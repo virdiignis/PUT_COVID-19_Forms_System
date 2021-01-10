@@ -1,3 +1,49 @@
 {% extends "forms/form_modal.html" %}
 {% load i18n %}
 {% block content_title %}{% translate "Report isolation" %}{% endblock %}
+{% block nonstandard_fields %}
+    <div class="form-group row justify-content-between {% if form.reason.errors %} invalid {% endif %}">
+        {{ form.reason.label_tag }}
+        <div class="col-7">
+            {{ form.reason }}
+            <small class="form-text text-muted">{{ form.reason.help_text }}</small>
+
+            {% for error in form.reason.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.order_date.errors %} invalid {% endif %}">
+        {{ form.order_date.label_tag }}
+        <div class="col-7">
+            {{ form.order_date }}
+            <small class="form-text text-muted">{{ form.order_date.help_text }}</small>
+
+            {% for error in form.order_date.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.start_date.errors %} invalid {% endif %}">
+        {{ form.start_date.label_tag }}
+        <div class="col-7">
+            {{ form.start_date }}
+            <small class="form-text text-muted">{{ form.start_date.help_text }}</small>
+
+            {% for error in form.start_date.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-group row justify-content-between {% if form.end_date.errors %} invalid {% endif %}">
+        {{ form.end_date.label_tag }}
+        <div class="col-7">
+            {{ form.end_date }}
+            <small class="form-text text-muted">{{ form.end_date.help_text }}</small>
+
+            {% for error in form.end_date.errors %}
+                <p class="help-block text-danger">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
