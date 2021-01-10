@@ -1,0 +1,3 @@
+#!/bin/bash
+screen -d -m bash -c 'while true; do uwsgi uwsgi.ini; done;'
+screen -d -m bash -c 'while true; do celery -A forms worker -l info -E --uid nginx --gid nginx -f logs/celery.log; done;'
