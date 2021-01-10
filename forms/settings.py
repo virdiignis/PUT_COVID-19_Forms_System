@@ -11,7 +11,7 @@ SECRET_KEY = 'np9&!lf+*ezh6)z@m6iw_^g0lr4g%g08oc6m5^n#4t9a4z(-%_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['covid.put.poznan.pl', '127.0.0.1']
+ALLOWED_HOSTS = ['covid.put.poznan.pl']
 
 # Application definition
 
@@ -69,25 +69,25 @@ DATABASES = {
     }
 }
 
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django_redis.cache.RedisCache",
-#         "LOCATION": "unix:/var/sockets/redis.sock",
-#         "OPTIONS": {
-#             "CLIENT_CLASS": "django_redis.client.DefaultClient"
-#         },
-#         "KEY_PREFIX": "covidcache"
-#     }
-# }
-
-# CELERY_BROKER_URL = 'redis+socket:///var/sockets/redis.sock'
-CELERY_TIMEZONE = "Europe/Warsaw"
-CELERY_BEAT_SCHEDULE = {
-    'mailing': {
-        'task': 'mailing',
-        'schedule': 10.0,
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "unix:/var/sockets/redis.sock",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "covidcache"
     }
 }
+
+CELERY_BROKER_URL = 'redis+socket:///var/sockets/redis.sock'
+CELERY_TIMEZONE = "Europe/Warsaw"
+# CELERY_BEAT_SCHEDULE = {
+#     'mailing': {
+#         'task': 'mailing',
+#         'schedule': 10.0,
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -130,7 +130,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = "Biuro ds. COVID-19 <biurocovid@put.poznan.pl>"
 SERVER_EMAIL = "COVID Forms App <biurocovid@put.poznan.pl>"
-
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
