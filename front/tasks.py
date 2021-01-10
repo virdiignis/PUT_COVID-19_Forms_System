@@ -19,7 +19,7 @@ def send_confirmation_mail(self, form_id):
 
         suffix = reverse("confirm", args=(form.confirmation_token,))
         if suffix.startswith('/pl-pl/') or suffix.startswith('/en-us/'):
-            suffix = '/' + suffix[4:]
+            suffix = suffix[4:]
 
         link = settings.ALLOWED_HOSTS[0] + '/' + suffix
         html_content = f"""Dzień dobry,<br>
