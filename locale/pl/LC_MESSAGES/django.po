@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-10 04:01+0100\n"
+"POT-Creation-Date: 2021-01-11 12:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,11 +39,11 @@ msgstr ""
 msgid "Report isolation"
 msgstr "Raportuj izolację"
 
-#: templates/forms/form_modal.html:150
+#: templates/forms/form_modal.html:161
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: templates/forms/form_modal.html:152
+#: templates/forms/form_modal.html:163
 msgid "Submit"
 msgstr "Prześlij"
 
@@ -66,12 +66,14 @@ msgid ""
 "Report ongoing isolation caused by infected roomate or family member, or by "
 "contact with someone infected."
 msgstr ""
-"Zaraportuj o trwającej izolacji spowodowanej zakażeniem domownika lub członka rodziny, "
-"albo kontaktem z kimś zakażonym."
+"Zaraportuj o trwającej izolacji spowodowanej zakażeniem domownika lub "
+"członka rodziny, albo kontaktem z kimś zakażonym."
 
 #: templates/home.html:27
 msgid "Report test order – including isolation and reasons to be tested."
-msgstr "Zaraportuj o skierowaniu na test – wraz z wynikającą izolacją i powodami skierowania."
+msgstr ""
+"Zaraportuj o skierowaniu na test – wraz z wynikającą izolacją i powodami "
+"skierowania."
 
 #: templates/home.html:36
 msgid "Report test result – along with isolation dates."

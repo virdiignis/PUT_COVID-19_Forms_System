@@ -52,6 +52,13 @@ class Form(models.Model):
         ("heal", _("Healthy (negative test result)")),
         ("held", _("Convalescent (negative test result)")),
     ), verbose_name=_("current health state"))
+
+    isolation_place = models.CharField(max_length=1, default='H', choices=(
+        ("H", _("Home")),
+        ("S", _("Hospital")),
+        ("D", _("DS4")),
+        ("I", _("Isolation ward"))), verbose_name=_("isolation place"))
+
     doc = models.FileField(max_length=300, upload_to="docs/%Y/%m/", verbose_name=_("Confirmation document"), null=True,
                            blank=True, help_text=_("Here you can upload PDF document confirming sent data. (optional)"))
     remarks = models.TextField(verbose_name=_("remarks"), null=True, blank=True,

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-10 04:01+0100\n"
+"POT-Creation-Date: 2021-01-11 12:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgstr "mgr inż."
 
 #: front/models.py:16
 msgid "dr"
-msgstr "drd"
+msgstr "dr"
 
 #: front/models.py:17
 msgid "dr eng."
@@ -165,71 +165,91 @@ msgstr "Ozdrowiały (negatywny wynik testu)"
 msgid "current health state"
 msgstr "obecny stan zdrowia"
 
-#: front/models.py:55
+#: front/models.py:57
+msgid "Home"
+msgstr "Dom"
+
+#: front/models.py:58
+msgid "Hospital"
+msgstr "Szpital"
+
+#: front/models.py:59
+msgid "DS4"
+msgstr "DS4"
+
+#: front/models.py:60
+msgid "Isolation ward"
+msgstr "Izolatorium"
+
+#: front/models.py:60
+msgid "isolation place"
+msgstr "miejsce izolacji"
+
+#: front/models.py:62
 msgid "Confirmation document"
 msgstr "Dokument potwierdzający"
 
-#: front/models.py:56
+#: front/models.py:63
 msgid "Here you can upload PDF document confirming sent data. (optional)"
 msgstr "Tutaj możesz wysłać PDF potwierdzający zgłoszenie (opcjonalne)."
 
-#: front/models.py:57
+#: front/models.py:64
 msgid "remarks"
 msgstr "Uwagi"
 
-#: front/models.py:58
+#: front/models.py:65
 msgid "Tell us if this form missed anything important."
 msgstr "Wpisz istotne informacje, których nie uwzględniono w formularzu."
 
-#: front/models.py:64 front/models.py:72
+#: front/models.py:71 front/models.py:79
 msgid "test order date"
 msgstr "data zlecenia testu"
 
-#: front/models.py:65 front/models.py:77
+#: front/models.py:72 front/models.py:84
 msgid "reason to get tested"
 msgstr "powód zlecenia testu"
 
-#: front/models.py:66 front/models.py:78
+#: front/models.py:73 front/models.py:85
 msgid "e.g. symptoms, had contact with sick person etc."
 msgstr "np. objawy, kontakt z osobą chorą itp."
 
-#: front/models.py:67 front/models.py:79
+#: front/models.py:74 front/models.py:86
 msgid "test order issuer"
 msgstr "zlecający test"
 
-#: front/models.py:68 front/models.py:80
+#: front/models.py:75 front/models.py:87
 msgid "e.g. doctor, SANEPID, private"
 msgstr "np. lekarz, SANEPID, prywatnie"
 
-#: front/models.py:73
+#: front/models.py:80
 msgid "test date"
 msgstr "data testu"
 
-#: front/models.py:74
+#: front/models.py:81
 msgid "result date"
 msgstr "data uzyskania wyniku"
 
-#: front/models.py:75
+#: front/models.py:82
 msgid "test result"
 msgstr "wynik testu"
 
-#: front/models.py:76
+#: front/models.py:83
 msgid "Positive"
 msgstr "Pozytywny"
 
-#: front/models.py:76
+#: front/models.py:83
 msgid "Negative"
 msgstr "Negatywny"
 
-#: front/models.py:81
+#: front/models.py:88
 msgid "planned isolation end date"
 msgstr "planowana data końca izolacji"
 
-#: front/models.py:85
+#: front/models.py:92
 msgid "isolation reason"
 msgstr "powód izolacji"
 
-#: front/models.py:87
+#: front/models.py:94
 msgid ""
 "If your isolation is caused by test order or positive test result, use the "
 "respective forms to report it."
@@ -237,15 +257,15 @@ msgstr ""
 "Jeśli izolacja jest spowodowana zleceniem testu lub pozytywnym wynikiem "
 "testu, użyj odpowiedniego z pozostałych formularzy."
 
-#: front/models.py:88
+#: front/models.py:95
 msgid "order date"
 msgstr "data zlecenia"
 
-#: front/models.py:89
+#: front/models.py:96
 msgid "start date"
 msgstr "data początku"
 
-#: front/models.py:90
+#: front/models.py:97
 msgid "planned end date"
 msgstr "planowana data końca"
 

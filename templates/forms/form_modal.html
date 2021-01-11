@@ -120,6 +120,17 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="form-group row justify-content-between {% if form.isolation_place.errors %} invalid {% endif %}">
+            {{ form.isolation_place.label_tag }}
+            <div class="col-7">
+                {{ form.isolation_place }}
+                <small class="form-text text-muted">{{ form.isolation_place.help_text }}</small>
+
+                {% for error in form.isolation_place.errors %}
+                    <p class="help-block text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+        </div>
         {% block nonstandard_fields %}
         {% endblock %}
         <div class="form-group row justify-content-between {% if form.doc.errors %} invalid {% endif %}">
